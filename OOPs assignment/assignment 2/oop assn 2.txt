@@ -1,0 +1,144 @@
+Question 1:
+import java.util.*;
+class Question1
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a the size of array : ");
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        int i=0;
+        for (i = 0; i < n; i++) {
+            System.out.println("Enter value : ");
+            a[i]=sc.nextInt();
+        }
+        System.out.println("The array elements are : ");
+        for (i = 0; i < n; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}
+
+Question 2:
+import java.util.*;
+public class Question2 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of array : ");
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        int i=0,sum=0;
+        for (i = 0; i < n; i++) {
+            System.out.println("Enter value : ");
+            a[i]=sc.nextInt();
+            if(a[i]%2==0)
+            sum+=a[i];
+        }
+        System.out.println("The sum of all elements are : "+sum);
+    }
+}
+
+Question 3:
+import java.util.*;
+public class Question3 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter rows and columns : ");
+        int r=sc.nextInt();
+        int c=sc.nextInt();
+        int a[][]=new int[r][c];
+        int b[][]=new int[r][c],i=0,j=0;
+        int SUM[][]=new int[r][c];
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < c; j++){
+                System.out.println("for A, Enter element : ");
+                a[i][j]=sc.nextInt();
+            }
+        }
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < c; j++){
+                System.out.println("for B, Enter element : ");
+                b[i][j]=sc.nextInt();
+            }
+        }
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < c; j++){
+                
+                SUM[i][j]=a[i][j]+b[i][j];
+            }
+        }
+        System.out.println("the sum : ");
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < c; j++){
+                System.out.print(SUM[i][j]+"  ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Question 4:
+import java.util.*;
+public class Question4 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter rows and columns : ");
+        int r=sc.nextInt();
+        int a[][]=new int[r][r];
+        int i=0,j=0,sum=0;
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < r; j++){
+                System.out.println("Enter element : ");
+                a[i][j]=sc.nextInt();
+            }
+        }
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < r; j++){
+                if(i==j)
+                sum+=a[i][j];
+            }
+        }
+        System.out.println("The sum of diagonal elements : "+sum);
+    }
+}
+
+Question 5:
+import java.util.*;
+public class Question5 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter rows and columns : ");
+        int r=sc.nextInt();
+        int c=sc.nextInt();
+        int a[][]=new int[r][c];
+        int b[][]=new int[r][c],i=0,j=0,k=0;
+        int M[][]=new int[r][c];
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < c; j++){
+                System.out.println("for 1st matrix, Enter element : ");
+                a[i][j]=sc.nextInt();
+            }
+        }
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < c; j++){
+                System.out.println("for 2nd matrix, Enter element : ");
+                b[i][j]=sc.nextInt();
+            }
+        }
+        for (i = 0; i < r; i++) {
+            for(j = 0; j < c; j++){
+                M[i][j]=0;
+                for(k = 0; k < c; k++){
+                    M[i][j]+=a[i][k]*b[k][j];
+                }
+            }
+        }
+        System.out.println("The multiplication of matrix : ");
+        for (i = 0; i < r; i++) {
+            for(j = 0;j < c; j++){
+                System.out.print(M[i][j]+"  ");
+            }
+            System.out.println();
+        }
+    }
+}
